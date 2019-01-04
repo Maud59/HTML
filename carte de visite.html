@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+      <title>Carte de visite</title>
+<style>
+      *{
+            font-family: 'Roboto', sans-serif;
+            margin:0;
+            padding:0;
+      }
+      .carte{
+            background-color: black;
+            width:600px;
+            height:auto;
+            margin:auto;
+            color:white;
+            margin-bottom:5px;
+            padding:2%
+      }
+      .photo{
+            border-radius:50%;
+            width:200px;
+            height:200px;
+            background-color: white;
+            top:50%;
+            position:relative;
+            margin-right:20px;
+            overflow:hidden;
+            border:2px solid white;
+            z-index:0;
+      }
+      .carte::before{/*Le before/after ne fonctionne qu'avec des contents*/ 
+            font-size: 30px;
+            text-align:center;
+            line-height:204px;
+            content:"\25BA"; /*permet d'insérer des éléments à partir du CSS*/
+            position:absolute;
+            height:204px;
+            width:204px;
+            background-color:rgba(0, 179, 211, 0);
+            border-radius: 50%;
+            display:block;
+            z-index:3;
+            transition: background-color 0.4s linear;
+      }
+      .carte:hover::before{
+            background-color:rgba(0, 179, 211, 0.5);
+      }
+      .photo img{
+            height:200px;
+            margin-left:-25%;
+      }
+      .desc{
+            width:300px;
+            float: right;
+            transform:translateY(-100%);
+            padding-right:30px;
+            text-align: justify;
+      }
+
+</style>
+</head>
+<body>
+      <div class="carte">
+            <div class="photo">
+                  <a href="#">
+                        <img src="images/chat.jpeg" alt="photo de profil">
+                  </a>
+            </div>
+            <div class="desc">
+                  <p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dicta ipsam, perspiciatis iste quibusdam sunt iusto. Aliquam, reprehenderit temporibus. Repellat.</span>
+                        <br/>
+                        <span>Corrupti officia, quidem minus a tenetur, laudantium blanditiis pariatur modi veritatis porro voluptate beatae qui nisi doloremque magni dolorem necessitatibus?</span>
+                  </p>
+
+            </div>
+      </div>
+      <div class="carte">
+            <div class="photo">
+                  <a href="#">
+                        <img src="images/langage-chat.jpeg" alt="photo de profil">
+                  </a>
+                  </div>
+            <div class="desc">
+                  <p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dicta ipsam, perspiciatis iste quibusdam sunt iusto. Aliquam, reprehenderit temporibus. Repellat.</span>
+                        <br/>
+                        <span>Corrupti officia, quidem minus a tenetur, laudantium blanditiis pariatur modi veritatis porro voluptate beatae qui nisi doloremque magni dolorem necessitatibus?</span>
+                  </p>
+
+            </div>
+      </div>
+      <div class="carte">
+            <div class="photo">
+                  <a href="#">
+                        <img src="images/gouttiere.jpg" alt="photo de profil">
+                  </a>
+            </div>
+            <div class="desc">
+                  <p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dicta ipsam, perspiciatis iste quibusdam sunt iusto. Aliquam, reprehenderit temporibus. Repellat.</span>
+                        <br/>
+                        <span>Corrupti officia, quidem minus a tenetur, laudantium blanditiis pariatur modi veritatis porro voluptate beatae qui nisi doloremque magni dolorem necessitatibus?</span>
+                  </p>
+
+            </div>
+      </div>
+            
+      
+</body>
+</html>
